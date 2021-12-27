@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="style.css">
+	<title>Cocacola Website - Página Incial</title>
+</head>
+<body>
+ <section>
+ 	<dix class="circle"></dix>
+ 	<header>
+ 		<a href="#"><img src="assets/logo.png" class="logo"></a>
+ 		<div class="toggle" onclick="toggleMenu()"></div>
+ 		<ul class="navigation">
+ 		<li><a href="#">Home</a>
+ 		<li><a href="#">Menu</a>
+ 		<li><a href="#">Catálogo</a>
+ 		<li><a href="#">Contato</a>
+ 		</ul>
+ 	</header>
+ 	<div class="content">
+ 		<div class="textBox">
+ 		<h2>Prove a Sensação</h2>
+ 		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+ 		<a href="#">Leia Mais</a>
+ 	</div>
+ 	<div class="imgBox">
+ 		<!-- Swiper -->
+    <div class="swiper mySwiper">
+     <div class="swiper-wrapper">
+     <div class="swiper-slide"><img src="assets/cocacola1.png"></div>
+     <div class="swiper-slide"><img src="assets/cocacola2.png"></div>
+     <div class="swiper-slide"><img src="assets/cocacola3.png"></div>
+     <div class="swiper-slide"><img src="assets/cocacola4.png"></div>
+     <div class="swiper-slide"><img src="assets/cocacola5.png"></div>
+     <div class="swiper-slide"><img src="assets/cocacola6.png"></div>
+     </div>
+ 	</div>
+ 	<ul class="sci">
+ 		<li><a href="#"><img src="assets/facebook.png"></a></li>
+ 		<li><a href="#"><img src="assets/twitter.png"></a></li>
+ 		<li><a href="#"><img src="assets/instagram.png"></a></li>
+    </ul>
+ </section>
+ <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+ <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop: true,
+      });
+
+      function toggleMenu() {
+      	const menuToggle = document.querySelector('.toggle');
+      	const navigation = document.querySelector('.navigation')
+      	menuToggle.classList.toggle('active')
+      	navigation.classList.toggle('active')
+      }
+
+    </script>
+</body>
+</html>
